@@ -1,0 +1,25 @@
+package g_search_sort;
+//Binary Search
+public class C119 {
+	public static void main(String[] args) {
+		int arr[] = {1,4,8,9,11,17, 20, 31, 37, 70};
+		int left = 0;
+		int right = arr.length -1;
+		int key = 4;
+		int index = -1;
+		while(left <= right) {
+			int mid = (left + right) / 2;
+			if(arr[mid] == key) {
+				index = mid;
+				break;
+			}
+			else if(arr[mid]> key) {
+				right = mid -1;
+			}
+			else {
+				left = mid + 1;
+			}
+		}
+		System.out.println(index != -1 ? key + " is available at" + index : " is not available");
+	}
+}

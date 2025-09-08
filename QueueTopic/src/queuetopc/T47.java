@@ -1,0 +1,42 @@
+package queuetopc;
+import java.util.LinkedList;
+
+class MyQueue {
+	private LinkedList<Integer> queue;
+	MyQueue(){
+		queue = new LinkedList<Integer>();
+	}
+	public boolean isEmpty() {
+		return queue.size() == 0;
+	}
+	public void add(Integer num) {
+		queue.add(num);
+	}
+	public Integer read() {
+		return queue.peek();
+	}
+	public Integer remove() {
+		return queue.poll();
+	}
+	@Override
+	public String toString() {
+		return queue.toString();
+	}
+}
+public class T47 {
+	public static void main(String[] args) {
+		MyQueue queue = new MyQueue();
+		queue.add(1000);
+		queue.add(2000);
+		queue.add(3000);
+		queue.add(4000);
+		//queue.add(5000);
+		System.out.println(queue);
+		System.out.println(queue.read());
+		System.out.println(queue);
+		System.out.println(queue.remove());
+		System.out.println(queue);
+		System.out.println(queue.isEmpty());
+		
+	}
+}

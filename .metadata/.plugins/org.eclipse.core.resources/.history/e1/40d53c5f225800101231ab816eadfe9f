@@ -1,0 +1,41 @@
+package topic1;
+
+public class Q40 {
+	public static void main(String[] args) {
+		
+		int arr[] = {10,20,15,25,5,30};
+		
+		System.out.println("Indexes where elements is greater than both neighbour:");
+		
+		for(int i=1; i<arr.length-2; i++) {
+			if(arr[i]>arr[i-1] && arr[i]>arr[i+1]) {
+				System.out.print(i+ " ");
+			}
+		}
+		
+//		for(int i=1; i<arr.length-2; i++) {
+//			if(arr[i]>arr[i-1] && arr[i]>arr[i+1]) {
+//				System.out.print(i + " ");
+//			}
+//		}
+		
+//		for(int i=1; i<arr.length-2; i++) {
+//			if(arr[i]>arr[i-1] && arr[i]>arr[i+1]) {
+//				System.out.println(i+ " ");
+//			}
+//		}
+		
+//		for(int i=1; i<arr.length-2; i++) {
+//			if(arr[i]>arr[i-1]&& arr[i]>arr[i+1]) {
+//				System.out.println(i + " ");
+//			}
+//		}
+		
+//		for(int i=1; i<arr.length-2; i++) {
+//			if(arr[i]> arr[i-1] && arr[i] > arr[i+1]) {
+//				System.out.println(i + " ");
+//			}
+//		}
+		
+	}
+}

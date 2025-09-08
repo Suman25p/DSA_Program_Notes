@@ -1,0 +1,74 @@
+package topic1;
+
+
+class Node {
+	int data;
+	Node next;
+	Node prev;
+	Node(int data){
+		this.data = data;
+	}
+}
+class LinkedList {
+	Node first, last;
+	void add(int data) {
+		Node newNode = new Node(data);
+		if(first == null) {
+			first = newNode;
+		}
+		else {
+			last.next = newNode;
+		}
+		newNode.prev = last;   //double
+		last = newNode;
+		
+		last.next = first; //clockwise
+		first.prev= last; //antiClockwise circular
+	}
+	void read() {
+		Node current = first;
+		if(current == null) {
+			return;
+		}
+		else {
+			System.out.print(current.data+ " ");
+		}
+		current = current.next;
+		while(current != null) {
+			System.out.print(current.data + ", ");
+			current = current.next;
+		}
+		System.out.println();
+	}
+	
+	void readInReverse() {
+		Node current = first;
+		if(current == null) {
+			return;
+		}
+		else {
+			System.out.print(current.data+ " ");
+		}
+		current = current.prev;
+		while(current != last) {
+			System.out.print(current.data + ", ");
+			current = current.prev;
+		}
+		System.out.println();
+	}
+
+}
+public class T77 {
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		list.add(40);
+		list.add(50);
+		//list.add(60);
+		list.read();
+		list.readInReverse();
+	}
+}
+

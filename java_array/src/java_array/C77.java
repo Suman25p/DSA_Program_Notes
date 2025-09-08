@@ -1,0 +1,9 @@
+package java_array;
+
+public class C77 {
+	public static void main(String[] args) {
+	int[] arr = {100,200,300, 400, 500,600,700,800};
+	int middle = arr.length /2;
+		System.out.print(arr[middle-1]+ "," + arr[middle]+ ","+ arr[middle+1]);
+	}
+}

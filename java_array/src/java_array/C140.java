@@ -1,0 +1,16 @@
+package java_array;
+
+import java.util.Arrays;
+
+public class C140 {
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5,6,7,8,9,10};
+		System.out.println(Arrays.toString(arr));
+		for(int i=arr.length -1; i>1; i--) {
+			arr[i] = arr[i-2];
+		}
+		arr[0]=0;
+		arr[1] = 0;
+		System.out.println(Arrays.toString(arr));
+	}
+}

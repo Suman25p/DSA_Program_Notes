@@ -1,0 +1,16 @@
+package java_array;
+
+public class C74 {
+	public static void main(String[] args) {
+		int[] arr = {100,200,300, 400, 500,600,700,800,900,1000};
+		for(int i=0; i<arr.length; i++) {
+//			if(i != arr.length/2) {
+//			System.err.print(arr[i]+ ",");
+//			}
+			if(i == arr.length/2) {
+				continue;
+			}
+			System.out.print(arr[i]+ ",");
+		}
+	}
+}

@@ -1,0 +1,16 @@
+package g_search_sort;
+
+public class C118 {
+	int[] arr = {10,50,13,8,70,10,900, 3, 500};
+	//           0   1  2 3 4  5  6    7   8
+	int key = 3;
+	int index = -1;
+	for(int i = 0; i<arr.length; i++) {
+		if(arr[i] == key) {
+			index = i;
+			break;
+		}
+	}
+	System.out.println(index != -1 ? key + "is available at " + index : key + "is not available");
+	}
+}
